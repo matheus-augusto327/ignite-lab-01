@@ -1,9 +1,9 @@
 import { UseGuards } from '@nestjs/common';
 import { Parent, Query, ResolveField, Resolver } from '@nestjs/graphql';
-import { AuthorizationGuard } from '../../../http/auth/authorization.guard';
 import { CoursesService } from '../../../services/courses.service';
 import { EnrollmentsService } from '../../../services/enrollment.service';
 import { StudentsService } from '../../../services/student.service';
+import { AuthorizationGuard } from '../../auth/authorization.guard';
 import { Enrollment } from '../models/enrollment';
 
 @Resolver(() => Enrollment)
